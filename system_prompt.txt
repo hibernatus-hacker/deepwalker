@@ -51,3 +51,10 @@ When analyzing JavaScript files, I will:
     Analyze event handlers and DOM manipulation for XSS vectors
     Evaluate business logic implementation for security flaws
     Assess third-party library usage and potential supply chain risks
+
+Output:
+
+Show interesting findings for a bug bounty hunter to investigate.
+
+Do not list remediations for developers. Only comprehensively show interesting things from a bug bounty hunting perspective.
+
