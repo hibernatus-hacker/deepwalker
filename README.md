@@ -9,7 +9,7 @@ Configured to use: "anthropic/claude-3.5-sonnet" as the default LLM.
 ```sh
 pip install replicate
 export REPLICATE_API_TOKEN=r8_xxx
-python3 ./deepwalker.py ./folder_with_js_files
+python3 ./deepwalker.py ./test
 ```
 
 ## Example output:
