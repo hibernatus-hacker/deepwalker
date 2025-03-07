@@ -1,45 +1,39 @@
 # deepwalker
 
-Automate analysis of javascript files for quicker bug bounty hunting. Requires a [replicate.com](https://replicate.com) account.
+This is a simple tool that runs an LLM on a directory of files using a specified system prompt.
 
-Tweak the "system_prompt.txt" as needed to improve or change the result of the LLM analysis.
+By configuring the system prompt and file extension it's possible to generate a report collating the LLM results.
 
-Configured to use: "anthropic/claude-3.5-sonnet" as the default LLM.
+By providing different system prompts this is a flexible tool useful for a wide range of usecases including summarization.
+
+Requires a [replicate.com](https://replicate.com) account.
 
 ```sh
 pip install replicate
 export REPLICATE_API_TOKEN=r8_xxx
-python3 ./deepwalker.py ./test
+python3 ./deepwalker.py ./folder_with_js_files
 ```
 
-## Example output:
-
-This is the output from the test file that contains: "console.log(11)"
+# usage
 
 ```sh
-=== JAVASCRIPT SECURITY ANALYSIS REPORT ===
-Generated: 2025-03-03 23:04:53
 
-FILE #1: test/test.js
-================================================================================
-Status: COMPLETED
-Analyzed: 2025-03-03T23:04:53.591240
+python3 deepwalker ./directory_of_files --system-prompt "give me your opinion of this code as an angry pirate"
+python3 deepwalker ./directory_of_files --system-prompt ./system_prompt.txt --file-extension js
+python3 deepwalker ./directory_of_files --system-prompt "be unhelpful" --model "anthropic/claude-3.5-sonnet" --extensions js mjs
+python3 deepwalker.py ./test --extensions js mjs --model "deepseek-ai/deepseek-r1" --system-prompt "analyse this javascript"
+```
 
-ANALYSIS:
---------------------------------------------------------------------------------
-After analyzing the provided JavaScript code, I can report:
+# use cases
 
-NO FINDINGS
+You can use this to explain a code base like this..
 
-The provided code only contains a simple console.log statement with a numeric value (11), which does not present any security vulnerabilities, exposed secrets, or noteworthy security issues.
+```sh
+python3 deepwalker.py ./code_base --system-prompt "You an expert in <language> and provide clear and detailed explanations"
+```
 
+You can use it to search for bug bounty findings like this...
 
-================================================================================
-
-=== SUMMARY ===
-Total files processed: 1
-Successfully analyzed: 1
-Failed analyses: 0
-Skipped files: 0
-
+```sh
+python3 deepwalker.py ./code --system-prompt ./bb_system_prompt.txt
 ```
