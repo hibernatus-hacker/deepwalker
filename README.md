@@ -1,4 +1,4 @@
-# deepwalker
+# Deepwalker
 
 This is a simple tool that runs an LLM on a directory of files using a specified system prompt. 
 
