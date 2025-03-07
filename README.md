@@ -1,10 +1,8 @@
 # deepwalker
 
-This is a simple tool that runs an LLM on a directory of files using a specified system prompt.
+This is a simple tool that runs an LLM on a directory of files using a specified system prompts. 
 
-By configuring the system prompt and file extension it's possible to generate a report collating the LLM results.
-
-By providing different system prompts this is a flexible tool useful for a wide range of usecases including summarization.
+This is a flexible tool useful for a wide range of usecases including summarization.
 
 Requires a [replicate.com](https://replicate.com) account.
 
