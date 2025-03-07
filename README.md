@@ -1,6 +1,6 @@
 # deepwalker
 
-This is a simple tool that runs an LLM on a directory of files using a specified system prompts. 
+This is a simple tool that runs an LLM on a directory of files using a specified system prompt. 
 
 This is a flexible tool useful for a wide range of usecases including summarization.
 
