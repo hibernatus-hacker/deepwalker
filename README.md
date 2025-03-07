@@ -12,7 +12,7 @@ export REPLICATE_API_TOKEN=r8_xxx
 python3 ./deepwalker.py ./folder_with_js_files
 ```
 
-# Usage
+## Usage
 
 ```sh
 
@@ -22,7 +22,7 @@ python3 deepwalker ./directory_of_files --system-prompt "be unhelpful" --model "
 python3 deepwalker.py ./test --extensions js mjs --model "deepseek-ai/deepseek-r1" --system-prompt "analyse this javascript"
 ```
 
-# Use cases
+## Use cases
 
 You can use this to explain a code base like this..
 
